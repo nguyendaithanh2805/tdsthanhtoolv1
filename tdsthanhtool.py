@@ -51,9 +51,7 @@ class OOP:
                         print(" " * 50, end='\r')
                         continue
                 elif 'time_reset' in data:
-                    time_value = data['time_reset']
-                    print('Đổi cookie mới')
-                    print(time_value)
+                    print('Đổi cookie mới, bị giới hạn nhiệm vụ rồi')
                     exit()
                 else:
                     arr_id_value = [item['id'] for item in data]
