@@ -56,8 +56,6 @@ class OOP:
                 else:
                     arr_id_value = [item['id'] for item in data]
                     arr_type_value = [item['type'] for item in data]
-                    print(arr_type_value)
-                    print(arr_id_value)
                     for i in range(len(arr_id_value)):
                         type_value = arr_type_value[i]
                         id_value = arr_id_value[i]
