@@ -37,6 +37,7 @@ class OOP:
      
     def layNhiemVu(self):
         while True:
+            time.sleep(5)
             url = 'https://traodoisub.com/api/?fields=reaction&access_token={0}'.format(self.TDS_token)
             response = self.s.get(url)
             try:
