@@ -37,7 +37,7 @@ class OOP:
      
     def layNhiemVu(self):
         while True:
-            time.sleep(5)
+            time.sleep(10)
             url = 'https://traodoisub.com/api/?fields=reaction&access_token={0}'.format(self.TDS_token)
             response = self.s.get(url)
             try:
@@ -61,7 +61,7 @@ class OOP:
                         id_value = arr_id_value[i]
                         self.reaction(id_value, type_value)
                         self.nhanXu(id_value, type_value)
-                        time.sleep(2)
+                        time.sleep(10)
             except json.JSONDecodeError:
                 print("Error decoding JSON response.")
     def nhanXu(self, id_value, type_value):
