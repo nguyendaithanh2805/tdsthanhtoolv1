@@ -42,8 +42,7 @@ class OOP:
             response = self.s.get(url)
             try:
                 data = json.loads(response.text)
-                arr_id_value = []
-                arr_type_value = []
+                
                 if 'countdown' in data:
                         countdown_value = data['countdown']
                         for i in range(int(countdown_value) + 5, 0, -1):
@@ -62,8 +61,7 @@ class OOP:
                         id_value = arr_id_value[i]
                         self.reaction(id_value, type_value)
                         self.nhanXu(id_value, type_value)
-                        # del arr_id_value[i]
-                        # del arr_type_value[i]
+                        time.sleep(2)
             except json.JSONDecodeError:
                 print("Error decoding JSON response.")
     def nhanXu(self, id_value, type_value):
